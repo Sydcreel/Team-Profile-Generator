@@ -137,4 +137,73 @@ function addIntern() {
             finalTeamArray.push(teamMember)
             addTeamMember()
         });
-})
+};
+
+function createTeam() {
+    const htmlArray = []
+    const htmlStart = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>${finalTeamArray[0]}</title>
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <style>
+         ${style}
+        </style>
+    </head>
+    <body>
+        <div class="banner-bar">
+            <h1>${finalTeamArray[0]}</h1>
+        </div>
+        <div class="card-container">
+        `
+        htmlArray.push(htmlStart);
+    
+        for (let i = 1; i < finalTeamArray.length; i++) {
+            let object = `
+            <div class="member-card">
+                <div class="card-top">
+                    <h2>${finalTeamArray[i].name}</h2>
+                    <h2>${finalTeamArray[i].title}</h2>
+                </div>
+                <div class="card-bottom">
+                    <p>Employee ID: ${finalTeamArray[i].id}</p>
+                    <p>Email: <a href="mailto:${finalTeamArray[i].email}">${finalTeamArray[i].email}</a>></p>
+            `
+            if (finalTeamArray[i].officeNumber) {
+                object += `
+                <p>${finalTeamArray[i].officeNumber}</p>
+                `
+            }
+            if (finalTeamArray[i].github) {
+                object += `
+                <p>GitHub: <a href="https://github.com/${finalTeamArray[i].github}">${finalTeamArray[i].github}</a></p>
+                `
+            }
+            if (finalTeamArray[i].schoolName) {
+                object += `
+                <p>School: ${finalTeamArray[i].schoolName}</p>
+                `
+            }
+            object += `
+            </div>
+            </div>
+            `
+            htmlArray.push(object)
+        }
+    
+        const htmlEnd = `
+        </div>
+        </body>
+        </html>
+        `
+        htmlArray.push(htmlEnd);
+    
+        fs.writeFile(`./generateHTML/${finalTeamArray[0]}.html`, htmlArray.join(""), function (err) {
+            
+        })
+    }  
+startingPrompt()

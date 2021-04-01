@@ -15,7 +15,7 @@
 * Install npm inquirer
 
 ## Usage
-https://user-images.githubusercontent.com/71848212/113350177-be7acf00-92fe-11eb-8a19-5d7a4f2bac79.mp4
+![walkthrough](https://user-images.githubusercontent.com/71848212/113350467-216c6600-92ff-11eb-8213-3c09e8e73997.gif)
 
 ## Tests
 ![tests](https://user-images.githubusercontent.com/71848212/113350219-ca669100-92fe-11eb-865c-28ca43355cce.PNG)

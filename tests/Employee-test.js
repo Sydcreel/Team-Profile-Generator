@@ -33,7 +33,7 @@ test("Returns Employee icon", () => {
 });
 
 test("Returns Employee special property string", () => {
-  const employee = new Employee("Mei", 130, "Mei@ofthejungle.com");
+  const employee = new Employee("Mei", 130, "Mei@email.com");
   expect(employee.getSpec()).toBe("");
 });
 

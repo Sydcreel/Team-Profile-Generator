@@ -15,10 +15,10 @@
 * Install npm inquirer
 
 ## Usage
-![](./screenshots/walkthrough.mp4)
+![walkthrough](https://user-images.githubusercontent.com/71848212/113350467-216c6600-92ff-11eb-8213-3c09e8e73997.gif)
 
 ## Tests
-![](./screenshots/tests.png)
+![tests](https://user-images.githubusercontent.com/71848212/113350219-ca669100-92fe-11eb-865c-28ca43355cce.PNG)
 
 ## Contribution
 * https://www.contributor-covenant.org/

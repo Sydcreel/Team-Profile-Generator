@@ -32,7 +32,7 @@ test('Overwrites Employee spec based on role (Intern)', () => {
   expect(intern.getSpec()).toBe(`<p class="p-4">School: University5</p>`);
 });
 
-test("Returns rendered HTML card for Intern", () => {
+test('Returns rendered HTML card for Intern', () => {
   const intern = new Intern('ash', 130, 'ash@email.com', 'University6');
   expect(intern.render()).toBe(`
     <div class="card column is-one-quarter is-full-mobile m-3 p-0">

@@ -27,7 +27,7 @@ test('Acquires Employee properties', () => {
     expect(manager.getSpec()).toBe(`<p class="p-4">Office number: 4</p>`);
   });
   
-  test("Returns rendered HTML card for Manager", () => {
+  test('Returns rendered HTML card for Manager', () => {
     const manager = new Manager('gendo', 120, 'gendo@email.com', 5);
     expect(manager.render()).toBe(`
     <div class="card column is-one-quarter is-full-mobile m-3 p-0">
